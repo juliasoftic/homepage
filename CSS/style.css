@@ -1,0 +1,329 @@
+/* Allgemeine Stile */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header Styling */
+  header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  /* Website-Name Styling */
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  /* Navigation Styling */
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  nav a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: black; /* Standardfarbe für den Text */
+    font-size: 18px;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Sanfter Übergang für den Hover-Effekt */
+  }
+  
+  nav a:hover {
+    color: #ffffff;
+    background-color: #7f8f7d;
+    border-radius: 5px;
+  }
+  
+  /* Seiteninhalt Styling */
+  main {
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    color: #000000;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #000000;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #7f8f7d;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  /* Hero-Bereich mit Video */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Das Video soll den gesamten Bereich ausfüllen, ohne das Seitenverhältnis zu verzerren */
+  filter: grayscale(100%);  /* Setzt das Video auf Graustufen (50% für leichten Grauton) */
+  object-position: center;
+}
+
+/* Hintergrund-Video */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Text-Overlay */
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.overlay h1 {
+  color: #ffffff;
+}
+
+.overlay h3 {
+  color: #ffffff;
+}
+
+
+/* Info-Section mit Bild und Text */
+.info-section {
+  display: flex;
+  justify-content: center; /* Horizontal zentrieren */
+  align-items: center;     /* Vertikal zentrieren */
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+
+.info-container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  gap: 50px;
+}
+
+/* Sektion mit nur Überschrift und Text */
+.info-text-only {
+  padding: 50px 20px;  /* Padding, um etwas Abstand zum Rand zu haben */
+  display: flex;       /* Flexbox für vertikale Zentrierung */
+  justify-content: center;  /* Horizontale Zentrierung des Containers */
+  align-items: center; /* Vertikale Zentrierung des Textes */
+  background-color: #7f8f7d;
+}
+
+.info-text-container {
+  max-width: 1000px;   /* Maximale Breite auf 1000px setzen */
+  width: 100%;         /* Container soll volle Breite bis max-width einnehmen */
+  text-align: center;  /* Text horizontal zentrieren */
+  padding: 20px;       /* Padding, um etwas Abstand zum Rand des Containers zu haben */
+  border: 1px solid #fff; /* Weißer Rand um den Textbereich */
+}
+
+.info-text-only h2{
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 100px;
+  max-width: 1000px;
+}
+
+.info-text-only p{
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 100px;
+  margin-bottom: 0px;
+}
+
+
+
+/* Bild-Styling */
+/* Container für das quadratische Bild */
+.info-image {
+  width: 100%;
+  max-width: 500px;      /* Maximalbreite des Containers */
+  height: 500px;         /* Höhe auf 500px setzen, damit es quadratisch bleibt */
+  overflow: hidden;      /* Überschüssige Bereiche des Bildes werden abgeschnitten */
+  border-radius: 5px;    /* Optional: Abgerundete Ecken des Containers */
+}
+
+/* Bild-Styling (quadratisch zugeschnitten) */
+.info-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* Bild wird zugeschnitten, um den Container zu füllen */
+}
+
+/* Text-Bereich Styling */
+.info-text {
+  max-width: 600px;
+  text-align: left;
+}
+
+.info-text-rechtsb {
+  max-width: 600px;
+  text-align: right;
+}
+
+
+/* Button Styling */
+.info-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #7f8f7d;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.info-button:hover {
+  background-color: #4c554a;
+}
+
+/* Foto-Slider */
+.photo-slider {
+  width: 100%; /* Der Slider nimmt die gesamte Breite des Viewports ein */
+  height: 300px; /* Du kannst die Höhe nach Bedarf anpassen, hier 300px */
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden; /* Verhindert das Überlaufen der Bilder */
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: Dunkler Hintergrund für den Slider */
+}
+
+.slider-container {
+  position: relative;
+  width: 100%; /* Die Container-Breite erstreckt sich über den gesamten Bildschirm */
+  height: 100%; /* Container nimmt die volle Höhe des Sliders ein */
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease; /* Sanfter Übergang beim Wechseln der Bilder */
+}
+
+.slides img {
+  width: 100%; /* Jedes Bild nimmt die volle Breite des Containers ein */
+  height: 100%; /* Die Höhe jedes Bildes ist gleich der Höhe des Containers */
+  object-fit: cover; /* Sorgt dafür, dass das Bild nicht verzerrt wird und den gesamten Container füllt */
+  display: block;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(127, 143, 125, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 10%; /* Runde Ecken für die Pfeile */
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+/* Optionale Hover-Effekte für die Navigation */
+button:hover {
+  background-color: rgba(92, 102, 90, 0.5);
+}
+
+
+
+/* Footer-Stil */
+.footer {
+  background-color: #fff; /* Weißer Hintergrund */
+  color: #333; /* Dunkelgrauer Text (optional) */
+  text-align: center; /* Zentriert den Text horizontal */
+  padding: 20px 0; /* Vertikales Padding, um etwas Abstand zum Rand zu schaffen */
+  position: relative; /* Stelle sicher, dass der Footer relativ positioniert ist */
+  width: 100%; /* Der Footer soll sich über die gesamte Bildschirmbreite erstrecken */
+  bottom: 0; /* Positioniere den Footer am unteren Rand des Viewports (falls nötig) */
+}
+
+.footer p {
+  margin: 0; /* Entfernt unerwünschte Ränder um den Text */
+  font-size: 0.8rem; /* Setzt die Schriftgröße */
+  font-style: italic;
+}
+
+
+
+
+/* Media Queries für mobile Ansicht */
+@media (max-width: 1000px) {
+  .info-container {
+    flex-direction: column; /* Spaltenlayout für kleinere Bildschirme */
+    align-items: center;     /* Zentriert beide Elemente */
+    gap: 20px;
+  }
+
+  .info-image {
+    width: 80%;         /* Bild wird auf 80% der Bildschirmbreite gesetzt */
+    max-width: 400px;   /* Maximalbreite von 400px */
+    height: 400px;      /* Bildhöhe auf 400px gesetzt, quadratisch */
+  }
+
+  .info-text {
+    text-align: center;  /* Text wird für Mobilgeräte zentriert */
+    max-width: 100%;     /* Textcontainer nutzt 100% Breite */
+  }
+}
